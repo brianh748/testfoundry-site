@@ -1,45 +1,125 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test Foundry</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <style>
-    body {
-      background-color: #111;
-      color: #facc15;
-      font-family: monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-
-    img.logo {
-      max-width: 250px;
-      height: auto;
-      margin-bottom: 1.5em;
-      filter: drop-shadow(0 0 6px #facc15);
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.3em;
-    }
-
-    p {
-      font-size: 1.2em;
-      color: #ccc;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Foundry</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <style>
+        body {
+            margin: 0;
+            font-family: monospace;
+            background-color: #111;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        header, section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #111;
+        }
+        header img {
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 0px gold); }
+            to { filter: drop-shadow(0 0 15px gold); }
+        }
+        h1 {
+            color: gold;
+            margin-top: 30px;
+            font-size: 2.5em;
+        }
+        p {
+            color: #ccc;
+            font-size: 1.2em;
+        }
+        .tools, .contact {
+            background-color: #1a1a1a;
+        }
+        .tool-card {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        .tool-card h3 {
+            color: gold;
+        }
+        .about {
+            background-color: #191919;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px;
+            background-color: gold;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <img src="testfoundry-logo.png" alt="Test Foundry Logo" class="logo" />
-  <h1>Test Foundry</h1>
-  <p>Portfolio coming soon.</p>
+
+<header>
+    <img src="logo.png" alt="Test Foundry Logo">
+    <h1>Test Foundry</h1>
+    <p>Portfolio coming soon.</p>
+</header>
+
+<section class="tools" id="tools">
+    <h2>Tools</h2>
+    <div class="tool-card">
+        <h3>Test Case Uploader</h3>
+        <p>Upload multiple test cases from structured documents directly into Azure DevOps test plans, with support for folder targeting and duplicate prevention.</p>
+    </div>
+    <div class="tool-card">
+        <h3>Test Case Extractor</h3>
+        <p>Pulls test execution, bugs, tester comments, and suite data into clean CSVs, ready for reporting or Power BI dashboards.</p>
+    </div>
+    <div class="tool-card">
+        <h3>PDF Comparison Tool</h3>
+        <p>Visually compares scanned or inconsistent PDFs using OCR and highlights key differences — perfect for vendor validation.</p>
+    </div>
+    <div class="tool-card">
+        <h3>Bug Extractor</h3>
+        <p>Generates fast Excel reports showing open bugs, testers assigned, and current states with minimal overhead.</p>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I'm a QA automation specialist who builds custom tooling to eliminate repetitive work, boost visibility, and enable better decision-making. I focus on real impact — like test data flow, ADO integration, and cost savings — and I'm always ready to demo what I've built. No degree. Just results.</p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/xyyqekal" method="POST">
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
 </body>
 </html>
